@@ -19,7 +19,7 @@ class Student
     SELECT * FROM students
     WHERE name = ?
     SQL
-    DB[:conn].execute(sql).map {|row| self.new_from_db(row)}
+    DB[:conn].execute(sql, self.name).map {|row| self.new_from_db(row)}
   end
 
   def save
