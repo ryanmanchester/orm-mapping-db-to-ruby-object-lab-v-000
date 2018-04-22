@@ -30,6 +30,7 @@ class Student
     FROM students
     WHERE grade = ?
     SQL
+    binding.pry
     DB[:conn].execute(sql, grade)
 
   end
