@@ -29,7 +29,7 @@ class Student
     FROM students
     WHERE grade = ?
     SQL
-    DB[:conn].execute(sql, self.grade)
+    DB[:conn].execute(sql, grade)
 
   end
 
