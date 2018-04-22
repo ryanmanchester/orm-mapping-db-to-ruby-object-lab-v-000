@@ -26,8 +26,7 @@ class Student
 
   def self.count_all_students_in_grade_9
     sql = <<-SQL
-    SELECT *
-    FROM students
+    SELECT * FROM students
     WHERE grade = ?
     SQL
     binding.pry
